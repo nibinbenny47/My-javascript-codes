@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<p id="op">Click the button to wait 3 seconds, then alert "Hello".</p>
+
+<button onclick="myFunction()">start</button>
+<button onclick="stop()">stop</button>
+<script>
+    var seconds=0;
+    var id=0;
+    function printmsg(){
+        document.getElementById("op").innerHTML=seconds + "seconds";
+        seconds++;
+     }
+function myFunction() {
+  //setTimeout(function(){ alert("Hello"); }, 3000);
+ id=setInterval(printmsg, 3000);
+}
+function stop(){
+    window.clearInterval(id);
+}
+</script>
+
+</body>
+</html>
