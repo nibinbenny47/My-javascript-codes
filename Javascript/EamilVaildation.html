@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="txtEmail" id="txtEmail">
+    <button onclick="validate()" id="btnSave">save</button>
+    <script>
+        function validate(){
+            var email=document.getElementById("txtEmail").value;
+            var regx= /^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9]+).([a-z]{2,8})(.[a-z]{2,8})$/; //+ sign is use becaus ewe can use any number of charcaters after the first pattern
+            if(regx.test(email)){
+                alert("valid");
+            }
+            else{
+                alert("invalid");
+            }
+        }
+    </script>
+</body> 
+</html>
