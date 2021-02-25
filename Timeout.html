@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="op">Click the button to wait 3 seconds, then alert "Hello".</p>
+
+<button onclick="myFunction()">start</button>
+<button onclick="stop()">stop</button>
+
+<script>
+    var id=0;
+    function printmsg(){
+        document.getElementById("op").innerHTML="helloooo";
+     }
+function myFunction() {
+  //setTimeout(function(){ alert("Hello"); }, 3000);
+ id=setTimeout(printmsg, 3000);
+}
+function stop(){
+    window.clearTimeout(id);
+}
+</script>
+
+</body>
+</html>
