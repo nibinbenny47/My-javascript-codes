@@ -1,46 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-   <link rel="stylesheet" href="CSS/Style.css">
-   
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+ $("p").hover(function(){
+     $(this).css("background-color","yellow");},function(){
+         $(this).css("background-color","red");
+     }
+ );
+});
+</script>
 </head>
 <body>
-    <div id="div1" class="div1">
-        <p>This is first para</p>
-        <p>This is sec para</p>
-        <p>This is third para</p>
-    </div>
-    <div id="div2" class="div2">
-        <p>this is 4 th para</p>
-        <p>This is 5 para</p>
-    </div>
-    <div id="div3" class="div3">
-        <ul>
-            <li>
-                Apple
-            </li>
-            <li>orabge</li>
-            <li>banana</li>
-            <li>grape</li>
-        </ul>
-    </div>
-    <button id="btnClick">click</button>
-    <script src="jQuery.js"></script>
-   <script>
-       $(document).ready(function(){ //all jQuery method is writen inside $(document).ready(function()
-        
-        $("button").click(Fade);//instead of onclick() method in javascript
-        function Fade(){
-            $("div:first").fadeToggle(1000);
-        }
 
-       })
-      
+<p>Hover the mouse pointer over this paragraph.</p>
 
-   </script>
 </body>
 </html>
