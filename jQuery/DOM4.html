@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/Style.css">
+</head>
+<body>
+    <button id="btn1">Add class</button>
+    <button id="btn2">Remove class</button>
+    <button id="btn3">Toggle class</button>
+    <div class="div1" id="div1">
+        <p id="para1">hello wrold</p>
+    </div>
+    <script src="jQuery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $("#div1").addClass("newclass");
+            });
+         
+            $("#btn2").click(function(){
+                $("#div1").removeClass("newclass");
+            });
+            $("#btn3").click(function(){
+                $("#div1").toggleClass("newclass");
+            });
+         
+        });
+    </script>
+</body>
+</html>
+<!--
+1.adclass() -add new css class to the element
+2.removeclass() - remove class of element
+3.Toggleclass() - add or remove by toggling
+-->
