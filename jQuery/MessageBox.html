@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="jQuery/CSS/Style.css">
+    <link rel="stylesheet" href="jqueryui/jquery-ui.css">
+    <link rel="stylesheet" href="jqueryui/jquery-ui.structure.css">
+    <link rel="stylesheet" href="jqueryui/jquery-ui.theme.css">
+</head>
+<body>
+    <div id="div1">
+        <p>hello world</p>
+        <button>click</button>
+    </div>
+    <div class="msgBox" id="msgBox">
+        <h2>Warning message</h2> <br>
+        <p>click ok or cancel</p>
+       
+    </div>
+    <script src="jQuery/jQuery.js"></script>
+    <script src="jqueryui/jquery-ui.js"></script>
+    <script>
+        $("#div1").click(function(){
+            $("#msgBox").dialog({
+                title:"warning",
+                draggable:false, //can't drag the message box
+                resizable:true,
+                height:500,
+                width:500,
+                modal:true ,//can't do anything until perform actions on message box
+
+                buttons:[
+                {
+                    text:"close",
+                    icon:"ui-icon-heart",
+                    click:function(){
+                        $(this).dialog("close")
+                    }
+                  
+                    
+                },
+                {
+                    text:"OK",
+                    icon:"ui-icon-heart",
+                    click:function(){
+                        $(this).dialog("close")
+                    }
+                }]
+
+            })
+        });
+        
+    </script>
+</body>
+</html>
