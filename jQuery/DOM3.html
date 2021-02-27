@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/Style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button id="btn1">Append</button>
+    <button id="btn2">After</button>
+    <button id="btn3">Prepend</button>
+    <button id="btn4">before</button>
+    <button id="btn5">remove</button>
+    <button id="btn6">empty</button>
+    <div class="div1" id="div1">hello wrold</div>
+    <script src="jQuery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $("#div1").append("hi helooo");
+            });
+            $("#btn2").click(function(){
+                $("#div1").after("hi hello");
+            });
+            $("#btn3").click(function(){
+                $("#div1").prepend("hi hello");
+            });
+            $("#btn4").click(function(){
+                $("#div1").before("hi hello");
+            });
+            $("#btn5").click(function(){
+                $("#div1").remove();
+            });
+            $("#btn6").click(function(){
+                $("#div1").empty();
+            });
+
+        });
+    </script>
+</body>
+</html>
+<!--
+1.append() - insert items at the end of th element
+2.after() - insert after the element
+3.prepend()- insert items at the beginning of th element
+4.before() - insert before the element
+5.remove() -method will remove the selected element along with its contents and other nested elements (or child elements) and its contents.
+6.empty() - method will clear or remove the contents inside an element, including the child nodes that are nested inside the parent or the selected element. 
+-->
