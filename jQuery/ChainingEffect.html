@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/Style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1" class="div1" >
+        <p>hello world</p>
+        <p>good Morning</p>
+    </div>
+    <div id="div2" class="div2">
+        <ul>
+            <li>Apple</li>
+            <li>Orange</li>
+            <li>Grapes</li>
+        </ul>
+    </div>
+    <button id="btnClick" >Click</button>
+    <script src="jQuery.js"></script>
+    <script>
+      /*in chaining method multiple actions can be performed one by one .Here first fadeout fn occurs thn slidedown and then slideup fn will occurs*/
+        $(document).ready(function(){
+            $("#btnClick").click(function(){
+                $("#div1").fadeOut(2000).slideDown(2000).slideUp(2000);
+
+
+                });
+              
+            });
+       
+
+    </script>
+</body>
+</html>
