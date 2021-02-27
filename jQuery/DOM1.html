@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="txtHello" class="txtHello"><b><i>hello world</i></b></p>
+    <button id="btnClick">click</button>
+    <script src="jQuery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btnClick").click(function(){
+                alert($("#txtHello").text()),
+                alert($("#txtHello").html()),
+                alert($("#txtHello").css("color"));
+            });
+        });
+    </script>
+</body>
+</html>
+<!-- 
+1.text() used to access the text inside the element
+2.html() used to access all text including html elements
+3.attr() used to returns value  of the attribute 
+4.css() used to return css value
