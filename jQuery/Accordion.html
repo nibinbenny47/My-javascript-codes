@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="jQuery/CSS/Style.css">
+    <link rel="stylesheet" href="jqueryui/jquery-ui.css">
+    <link rel="stylesheet" href="jqueryui/jquery-ui.structure.css">
+    <link rel="stylesheet" href="jqueryui/jquery-ui.theme.css">
+</head>
+<body>
+    <div id="main-div">
+  
+    <div class="div1" id="div1">
+        <h1>Hello world</h1>
+        <p>hello world</p>
+
+    </div>
+    <div class="div2" id="div2">
+        <h1>Goodmorning</h1>
+        <p>Good morning</p>
+    </div>
+    <div class="div3" id="div3">
+        <h1>good afternoon</h1>
+        <p>good afternoon</p>
+    </div>
+</div>
+    <script src="jQuery/jQuery.js"></script>
+    <script src="jqueryui/jquery-ui.js"></script>
+    <script>
+        $("#main-div").accordion({
+            collapsible:true ,
+            event:"click",
+            active:2,
+            animate:3000, //to control speeed of animation
+            heightStyle:true,
+            icons:{header:"ui-icon-plus",activeHeader:"ui-icon-minus"}
+           
+
+        });
+    </script>
+</body>
+</html>
