@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const globalplayer=[
+            {
+                id:0,
+                name:"nibin",
+                state:"kerala"
+            },
+            {
+                id:1,
+                name:"manu",
+                state:"tamilnadu"
+            }
+        
+        ];
+        //**1.using general function**
+        globalplayer.forEach(function(value,index,array){
+            console.log(array);
+        })
+        //**using arrow function
+        globalplayer.forEach((value,index,array)=>{
+            console.log(value.name);
+        })
+        //2.**without using map function
+        const newArray=[];
+        for(let i=0;i<globalplayer.length;++i){
+            newArray.push(globalplayer[i].name);
+        }
+        //** with using map method 
+        const newArray=globalplayer.map((value)=>value.name);
+        console.log(newArray);
+        //3.**filter method
+        const newArray=globalplayer.filter((value)=>value.name === "nibin");
+        console.log(newArray);
+
+
+    </script>
+</body>
+</html>
