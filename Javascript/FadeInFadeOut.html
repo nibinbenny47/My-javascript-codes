@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       
+<img src="Photos/capshield.jpg" alt="capatinasheld" id="img1">
+
+<button onclick="fadein()">fadein</button>
+<button onclick="fadeout()">fadeout</button>
+<script>
+    var opacity=0;
+    var intervalID=0;
+    function fadein(){
+        intervalID=setInterval(show,20);
+
+    }
+    function show(){
+        var img=document.getElementById("img1");
+        opacity=Number(window.getComputedStyle(img).getPropertyValue("opacity")); //to get the opacity value .if opacity is 1,it means completely visible
+        if(opacity <1){
+            opacity=opacity+0.1;
+        }
+        else{
+            clearInterval(intervalID);
+        }
+    }
+    function fadeout(){
+        intervalID=setInterval(hide,2000);
+
+    }
+    function hide(){
+        var img=document.getElementById("img1");
+        opacity=Number(window.getComputedStyle(img).getPropertyValue("opacity")); //to get the opacity value .if opacity is 1,it means completely visible
+        if(opacity > 0){
+            opacity=opacity-0.1;
+        }
+        else{
+            clearInterval(intervalID);
+        }
+    }
+
+</script>
+
+</body>
+</html>
