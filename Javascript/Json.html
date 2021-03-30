@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const strObject={
+            id:0,
+            name:"nibin"
+        }
+        console.log(typeof strObject);
+        const jsonObject=`{
+            "id":0,
+            "name":"manu"
+        }`;
+    
+
+        
+        console.log(jsonObject);
+        //*** parse json into object format
+        const parseJson=JSON.parse(jsonObject);
+        console.log(parseJson.name);
+        console.log(typeof parseJson);
+        //*** convert object ibto string format
+        const stringfy=JSON.stringify(strObject);
+        console.log(stringfy);
+        console.log(typeof stringfy);
+
+      
+    </script>
+</body>
+</html>
