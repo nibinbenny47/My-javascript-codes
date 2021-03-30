@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="postlist">
+
+    </ul>
+    <script>
+        const posts=[{
+            id:1,
+            title:"intoduction"
+        },
+        {
+            id:2,
+            title:"chapter 1"
+        }]
+        //***1.The list items will appear
+        const getPosts=()=>{
+            let lis='';
+            setTimeout(()=>{
+                posts.forEach((post)=>{
+                    lis+=`<li> ${post.id}- ${post.title} </li>`;
+                    document.getElementById("postlist").innerHTML=lis;
+
+                },1000)
+            })
+        }
+        getPosts();
+
+        //***2.callback method is used to push another item to th list and then display the whole new list *****
+        const addPosts=(post,callback)=>{
+            setTimeout(()=>{
+                posts.push(post);
+                callback();
+            },2000)
+        }
+        addPosts({
+            id:3,
+            title:"chapter 2"
+        },getPosts);
+        
+    </script>
+</body>
+</html>
