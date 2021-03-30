@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Student{
+            constructor(){
+                console.log("constructor invoked");
+
+            }
+            //***no need to give keyword function***
+            setData(name,age){
+                this.name=name;
+                this.age=age;
+            }
+            getData(){
+                return `name is ${this.name} and age is ${this.age}`;
+            }
+        }
+        //***object is created here***
+        var obj=new Student();
+        obj.setData("NIBIN",20);
+        console.log(obj.getData());
+    </script>
+</body>
+</html>
