@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const globalplayer={
+            "id":"1",
+            "name":"nibin"
+        };
+        const player1={...globalplayer};//spread operator
+        player1.name="manu";
+        //**here player1 is another variable have the values of globalplayer and for changing the values in player1 which does not affect
+        //**globalplayer should be declared in spread operator
+        console.log(globalplayer);
+        console.log(player1);
+        //**for concat and append easier way through spread operator
+        const fruit=["apple","orange","grape"];
+        const veg=["onion","cucumber"];
+        const food=[...fruit,...veg];
+        console.log(food);
+
+    </script>
+</body>
+</html>
