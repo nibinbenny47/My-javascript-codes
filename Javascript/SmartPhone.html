@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="SmartPhone.css" />
+  </head>
+  <body>
+    <div class="main">
+      <nav>
+        <div class="logo">
+          <img src="../nibinpic/smallbubble.jpg" alt="" />
+        </div>
+        <div class="nav-links">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Phone</a></li>
+            <li><a href="#">Accessories</a></li>
+            <li><a href="#">Cart</a></li>
+          </ul>
+        </div>
+      </nav>
+      <!-- left section circle portion starts here -->
+      <div class="information">
+        <div class="overlay"></div>
+        <img src="../nibinpic/phone.jpg" alt="" class="mobile" />
+
+        <div id="circle">
+          <div class="feature one">
+            <img src="../nibinpic/camera.png" alt="" />
+            <div>
+              <h1>Camera</h1>
+              <p>12MP,Wide angle lens</p>
+            </div>
+          </div>
+
+          <div class="feature two">
+            <img src="../nibinpic/processor.png" alt="" />
+            <div>
+              <h1>processor</h1>
+              <p>snapdragon Octa-core 11nm</p>
+            </div>
+          </div>
+          <div class="feature three">
+            <img src="../nibinpic/display.png" alt="" />
+            <div>
+              <h1>Display</h1>
+              <p>6.5" Mini-Drop Ful screen</p>
+            </div>
+          </div>
+          <div class="feature four">
+            <img src="../nibinpic/battery.png" alt="" />
+            <div>
+              <h1>battery</h1>
+              <p>5000mAh, 720hrs standby</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- left section circle portion ends here -->
+      <div class="controls">
+        <img src="../nibinpic/arrow.png" alt="" id="upbtn" />
+        <h3>features</h3>
+        <img src="../nibinpic/arrow.png" alt="" id="downbtn" />
+      </div>
+    </div>
+
+    <script>
+      var circle = document.getElementById("circle");
+      var upbtn = document.getElementById("upbtn");
+      var downbtn = document.getElementById("downbtn");
+      var rotateValue = circle.style.transform;
+      var rotateSum;
+
+      upbtn.onclick = function () {
+        rotateSum = rotateValue + "rotate(-90deg)";
+        circle.style.transform = rotateSum;
+        rotateValue = rotateSum;
+      };
+      downbtn.onclick = function () {
+        rotateSum = rotateValue + "rotate(+90deg)";
+        circle.style.transform = rotateSum;
+        rotateValue = rotateSum;
+      };
+    </script>
+  </body>
+</html>
