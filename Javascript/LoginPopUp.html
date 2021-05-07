@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="LoginPopUp.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="loginbtn">
+        <h1>POP UP LOGIN</h1>
+        <a href="#" class="button" id="button">Login</a>
+      </div>
+
+      <div class="popup">
+        <div class="popup-content">
+          <img src="../nibinpic/close.jpg" alt="" class="close" id="close"/>
+          <img src="../nibinpic/userlogo.jpg" alt="" />
+          <div class="text-content">
+            <label for="">Username</label>
+            <input type="text" placeholder="enter name here" />
+            <label for="">Password</label>
+            <input type="password" placeholder="enter  password here" />
+            <a href="#">Login</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+        //---login button----------------
+        document.getElementById("button").addEventListener("click",()=>{
+            document.querySelector(".popup").style.display="flex"
+        })
+        //---close button--------------
+        document.getElementById("close").addEventListener("click",()=>{
+            document.querySelector(".popup").style.display="none";
+        })
+    </script>
+  </body>
+</html>
