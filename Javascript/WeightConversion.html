@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1></h1>
+    </header>
+    <section>
+        <article>
+            <form action="" name="Calculate">
+                Enter weight in pounds
+                <input type="text" name="lbs" id=""><br>
+                <input type="button" value="process" onclick="process()"><br>
+                Weigth in kilogram
+                <input type="text" name="kgs" id="" readonly="readonly">
+
+            </form>
+            <script>
+                function process(){
+                    var lbsVar= parseFloat(document.Calculate.lbs.value);
+                    var kgsVar=lbsVar/2.2;
+                    document.Calculate.kgs.value= Math.round(kgsVar*100)/100.0;
+                }
+            </script>
+
+
+        </article>
+    </section>
+    <footer>
+
+    </footer>
+</body>
+</html>
