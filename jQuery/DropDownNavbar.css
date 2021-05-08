@@ -1,0 +1,45 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+
+.child {
+    display: none;
+    width: 100%!important;
+    position: relative;
+    top: 10px;
+    background-color: rgb(54, 48, 48);
+    margin: 0;
+    padding: 0;
+    /* display: flex;
+    flex-direction: column; */
+    /*
+    
+    background-color: rgb(121, 118, 119); */
+}
+/* nav{
+    background-color: rgb(121, 118, 119);
+    color: floralwhite;
+    height: 50px;
+    padding: 10px;
+} */
+ul.parent > li{
+    float:left;
+    width: 20%;
+    text-align: center;
+    /* padding: 10px; */
+    background-color: rgb(121, 118, 119);
+    color:floralwhite ;
+    border-right: 1px solid rgb(243, 234, 234);
+    cursor: pointer;
+}
+/* ul{
+    display: flex;
+    justify-content: space-around;  
+    background-color: rgb(121, 118, 119);
+} */
