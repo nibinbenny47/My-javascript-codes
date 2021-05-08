@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+
+   
+    <select name="" id="sports" >
+        <option value="" >--select sports----</option>
+        <option value=""></option>
+    </select>
+</center>
+    <script src="../js/jQuery.js"></script>
+    <!-- ----add this cdn by copying from "select 2 cdn" in google ------>
+    <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var sportslist=["cricket","football","hockey","tennis"];
+            $("#sports").select2({    //-----select2 is inbuilt function------
+                data:sportslist
+            })
+
+        });
+
+    </script>
+</body>
+</html>
