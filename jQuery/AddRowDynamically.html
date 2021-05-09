@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table style="border: 2px solid rgb(116, 109, 109);">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Mobile</th>
+                <th><input type="button" name="btnAdd" id="btnAdd" value="ADD"></th>
+            </tr>
+        </thead>
+        <tbody id="tblEmpdata">
+            <tr>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="../js/jQuery.js"></script>
+    <script>
+        $("#btnAdd").on('click',function(){
+            var dynamichtmlText="<tr>";
+                dynamichtmlText +="<td><input type='text'></td>"
+                dynamichtmlText +="<td><input type='text'></td>"
+               
+                dynamichtmlText +="</tr>"
+                $("#tblEmpdata").append(dynamichtmlText);
+
+        });
+    </script>
+</body>
+</html>
