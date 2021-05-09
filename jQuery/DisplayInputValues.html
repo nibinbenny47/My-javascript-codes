@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tbody id="tblEmpdata">
+            <tr>
+                <td>Name:<input type="text" name="txtName" id=""></td>
+            </tr>
+            <tr>
+                <td>Mobile:<input type="text" name="txtMobile" id=""></td>
+            </tr>
+            <tr>
+              <td> Address: <input type="text" name="txtAddress" id=""></td>
+            </tr>
+
+        </tbody>
+    </table>
+    <input type="button" name="btnClick" id="btnClick" value="Show Values">
+    <div id="result">
+
+    </div>
+    <script src="../js/jQuery.js"></script>
+    <script>
+        $("#btnClick").click(function(){
+            var resultString= ""; //--to keep final result-----
+            $("#tblEmpdata > tr").each(function(){
+                resultString +=  $(this).find("input").val()  ;
+               
+
+            });
+            $("#result").text(resultString);
+
+        });
+
+    </script>
+</body>
+</html>
