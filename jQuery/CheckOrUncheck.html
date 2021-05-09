@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="checkbox" value="select all" id="chkSelectall">select all <br>
+        <input type="checkbox" value="apple" id="" class="chk">apple<br>
+        <input type="checkbox" value="orange" id="" class="chk">orange<br>
+        <input type="checkbox" value="grape" id="" class="chk">grape<br>
+    </div>
+
+    <script src="../js/jQuery.js"></script>
+    <script>
+        $("#chkSelectall").click(function(){
+            if($("#chkSelectall").is(":checked")){
+                $(".chk").prop('checked',true); //--prop means property----
+
+            }
+            else{
+                $(".chk").prop('checked',false);
+
+            }
+        });
+    </script>
+</body>
+</html>
