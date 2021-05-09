@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <select name="" id="ddlBooks">
+            <option value="--select Book--">--select Book--</option>
+        </select>
+        <input type="button" name="btnAdd" id="btnAdd" value="btnAdd">
+        <input type="button" name="btnClear" id="btnClear" value="btnClear">
+    </div>
+    <script src="../js/jQuery.js"></script>
+    <script>
+        var allBooks=["php","c#","java","python"];
+        //-----for adding ----------
+        $("#btnAdd").click(function(){
+            var allBooksLength=allBooks.length;
+            
+           for(var i=0;i<allBooksLength;++i){
+                $("#ddlBooks").append(new Option(allBooks[i],allBooks[i])); //----new Option(Text,Value)------
+            }
+        });
+
+        //----for removing----------------
+        $("#btnClear").click(function(){
+            $("#ddlBooks").empty();
+            $("#ddlBooks").append(new Option("---select book---","")); 
+
+        });
+    </script>
+</body>
+</html>
